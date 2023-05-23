@@ -1,0 +1,54 @@
+ <section class="vh-100">
+    <div class="container py-5 h-50 ">
+        <div class="row d-flex justify-content-center align-items-center h-5">
+            <div class="col col-xl-8 bdr">
+                <div class="card" style="border-radius: 1rem bdr">
+                    <div class="row g-0">
+                      
+                        <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                            <div class="card-body p-2 p-lg-5 text-black">
+
+                                <form #resultform="ngForm" (ngSubmit)="findresult(resultform.value)">
+
+                                    <h4 class=" mb-3 pb-1" style="letter-spacing: 1px;font-weight:bolder;text-align: center;">FIND RESULT!!</h4><br/>
+
+                                    <div class="mb-3">
+                                       
+                                        <label  class="form-label">Roll No.</label>
+                                        <input type="number" #Rollno="ngModel" ngModel name="Rollno" required class="form-control form-control-lg"/>  
+                                    
+                                        <span class="error" *ngIf="Rollno.invalid && Rollno.touched">Rollno. field is required</span>
+                                        
+                                    </div><br/>
+                                    <div class="mb-3">
+                                       
+                                        <label  class="form-label">Student Name</label>
+                                        <input type="text" #Name="ngModel" ngModel name="Name" required class="form-control form-control-lg" >
+                                         
+                                            
+                                            <span class="error" *ngIf="Name.invalid && Name.touched">Name field is required</span>
+                                    </div><br/>
+                                    
+                                   
+
+                                    <div class="pt-1 mb-2">
+                                        <button class="btn btn-dark btn-lg btn-block" type="submit"  [disabled]="!resultform.valid"  style="background-color:rosybrown" >Search</button>
+                                    </div>
+
+                                  
+
+                                </form>
+
+                            </div>
+                        </div>
+                          <div class="col-md-6 col-lg-5 d-none d-md-block">
+                            <img src="https://sinhro.rs/wp-content/uploads/2014/01/Knjige-u-biblioteci-600x394.jpg"
+                                 alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem; width: 472px; height: 450px; aspect-ratio: auto 412 / 618;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section> 

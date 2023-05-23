@@ -1,0 +1,46 @@
+
+       
+<div class="container-xl">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row"><br/>
+                   <div class="col-sm-4"><p> <b>Total {{count}} students</b></p></div>
+              
+                </div>
+            </div>
+            <table class="table table-striped table-hover table-bordered">
+                <thead>
+                    <tr>
+
+                        <th>Roll No.</th>
+                        <th>Name</th>
+                        <th>Date Of Birth</th>
+                        <th>Score</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                        <tr *ngFor="let data of students">
+
+                            <td>{{data.Rollno}}</td>
+                            <td>{{data.Name}}</td>
+                            <td>{{data.Dob}}</td>
+                            <td>{{data.Score}}</td>
+                            <td>
+                                
+                                    <a  class="edit"  title="Edit" data-toggle="tooltip"><i class="material-icons" (click)="editresult(data.id)" style="color:blue ;cursor:pointer;">&#xE254;</i></a>&nbsp;
+                                    <a  class="delete"  title="Delete" data-toggle="tooltip"><i class="material-icons" (click)="deletestudentresult(data.id)" style="color:red;cursor: pointer;">&#xE872;</i></a>
+                            </td>
+
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<router-outlet></router-outlet>

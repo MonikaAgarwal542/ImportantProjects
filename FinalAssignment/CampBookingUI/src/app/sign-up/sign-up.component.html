@@ -1,0 +1,161 @@
+
+<!-- <!DOCTYPE html>
+<html>
+ 
+    <body>
+        <section class="vh-100">
+            <div class="container py-5 h-100 ">
+                <div class="row d-flex justify-content-center align-items-center h-10 ">
+                    <div class="col col-xl-8 bdr">
+                        <div class="card" style="border-radius: 1rem bdr">
+                            <div class="row g-0">
+                              
+                                <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                                    <div class="card-body p-2 p-lg-5 text-black">
+        
+
+                                        
+                                        <form [formGroup]="signupform" (ngSubmit)="createuser()">
+        
+                                            <h4 class=" mb-3 pb-1" style="letter-spacing: 1px;font-weight:bolder;text-align: center;">WELCOME TO CAMPFUN!!</h4><br/>
+        
+                                            <h3 class="text-center" [ngClass]="isAccountCreated?'text-success':'text-danger'">{{displaymsg}}</h3>
+                                            <div class="mb-2">
+                                               
+                                                <label  class="form-label" for="Email">Email</label>
+                                                <input type="email"  formControlName="Email" id="Email" class="form-control form-control-lg" />
+                                                <span  class="text-danger" *ngIf="signupform.controls['Email'].touched && signupform.hasError('required','Email')">Email field is required</span>
+                                                <span  class="text-danger" *ngIf="signupform.controls['Email'].touched && signupform.hasError('pattern','Email')">Enter the valid email</span>
+                                            
+                                            </div><br/>
+                                            <div class="mb-2">
+                                               
+                                                <label  class="form-label" for="Password">Password</label>
+                                                <input type="password" formControlName="Password" id="Password" class="form-control form-control-lg" />
+                                                <span  class="text-danger" *ngIf="signupform.controls['Password'].touched && signupform.hasError('required','Password')">Password field is required</span>
+                                                <span  class="text-danger" *ngIf="signupform.controls['Password'].touched && signupform.hasError('pattern','Password')">Must be at least 5 characters and contain at least one special character</span>
+                                            </div>
+                                            <br/>
+                                            <div class="mb-2">
+                                               
+                                                <label  class="form-label" for="ConfirmPassword">Confirm Password</label>
+                                                <input type="password" formControlName="ConfirmPassword" id="ConfirmPassword" class="form-control form-control-lg" />
+                                                <span  class="text-danger" *ngIf="signupform.controls['ConfirmPassword'].touched && signupform.hasError('pattern','ConfirmPassword')">Must be at least 5 characters and contain at least one special character</span>
+                                                <span  class="text-danger" *ngIf="signupform.controls['ConfirmPassword'].touched && signupform.hasError('required','ConfirmPassword')" >ConfirmPassword field is required</span>
+                                               
+                                            </div>
+                                            <br/>
+                                           
+                                           
+        
+                                            <div class="pt-1 mb-2">
+                                                <button class="btn btn-dark btn-lg btn-block" [disabled]="!signupform.valid" style="background-color:rosybrown" >SignUp</button>
+                                            </div>
+                                            <div><a routerLink='/Login' style="color:darkblue" > Already have an account? LogIn here</a></div>
+        
+                                          
+        
+                                        </form>
+        
+                                    </div>
+                                </div>
+                                  <div class="col-md-6 col-lg-5 d-none d-md-block">
+                                    <img src="https://sinhro.rs/wp-content/uploads/2014/01/Knjige-u-biblioteci-600x394.jpg"
+                                         alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem; width: 412px; height: 640px; aspect-ratio: auto 412 / 618;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        
+    </body>
+  
+</html> -->
+
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 ">
+        <div class="container">
+            <a class="navbar-brand head">WELCOME TO CAMPFUN</a>
+            <!-- <a class=" navbar-brand head"></a> -->
+           
+            <button (click)=toggleDisplayDivIf() class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbar-collapse"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           
+            <div [ngClass]="{ 'show': isShowDivIf}" class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse hey" >
+                <ul class="navbar-nav flex-grow-1">
+                   
+                   
+                    <li  class="nav-item"  >
+                        <a class="nav-link" routerLink="/Login">LOGIN</a>
+                    </li>
+                    <li  class="nav-item" >
+                        <a class="nav-link" routerLink="/Signup">SIGNUP</a>
+                    </li>
+                    <li  class="nav-item" >
+                        <a class="nav-link" routerLink="/About">ABOUT</a>
+                    </li>
+                    <li  class="nav-item" >
+                        <a class="nav-link" routerLink="/Help">HELP?</a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </nav> <br/><br/><br/>
+
+    <section class="container-fluid">
+        <!-- row and justify-content-center class is used to place the form in center -->
+        <section class="row justify-content-center">
+          <section class="col-12 col-sm-6 col-md-4">
+            <form class="form-container" [formGroup]="signupform" (ngSubmit)="createuser()">
+            <div class="form-group">
+                <h4 class="text-center" [ngClass]="isAccountCreated?'text-success':'text-danger'">{{displaymsg}}</h4>
+              <h4 class="text-center font-weight-bold"> Welcome to CampFun!! </h4>
+              
+              <label for="Email">Email Address</label>
+               <input type="email"  formControlName="Email" id="Email" class="form-control">
+               <span  class="text-danger" *ngIf="signupform.controls['Email'].touched && signupform.hasError('required','Email')">Email field is required</span>
+                                                <span  class="text-danger" *ngIf="signupform.controls['Email'].touched && signupform.hasError('pattern','Email')">Enter the valid email</span>
+            </div>
+            <div class="form-group">
+              <label for="Password">Password</label>
+              <input type="password" formControlName="Password" id="Password" class="form-control" />
+              <span  class="text-danger" *ngIf="signupform.controls['Password'].touched && signupform.hasError('required','Password')">Password field is required</span>
+              <span  class="text-danger" *ngIf="signupform.controls['Password'].touched && signupform.hasError('pattern','Password')">Must be at least 5 characters and contain at least one special character</span>
+            </div>
+            <div class="form-group">
+                <label for="ConfirmPassword">Confirm Password</label>
+                <input type="password" formControlName="ConfirmPassword" id="ConfirmPassword" class="form-control" />
+                <span  class="text-danger" *ngIf="signupform.controls['ConfirmPassword'].touched && signupform.hasError('required','ConfirmPassword')">Password field is required</span>
+                <span  class="text-danger" *ngIf="signupform.controls['ConfirmPassword'].touched && signupform.hasError('pattern','ConfirmPassword')">Must be at least 5 characters and contain at least one special character</span>
+              </div>
+            <button [disabled]="!signupform.valid" class="btn btn-primary btn-block">Signup</button>
+            <div class="form-footer">
+              <p> Already have an account? <a routerLink="/Login">Login</a></p>
+              
+            </div>
+            </form>
+          </section>
+        </section>
+      </section>
+    </body>
+    
+
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+

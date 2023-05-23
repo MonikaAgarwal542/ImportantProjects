@@ -1,0 +1,56 @@
+﻿@using Company.Project.Web.Models;
+@using System.Collections.Generic
+@model IEnumerable<EventModel>
+@{
+    ViewBag.Title = "MyEvents";
+
+}
+
+
+
+
+
+
+<div class="container-xl">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-8"><h2>My Events</h2></div>
+                    <hr/>
+
+                </div>
+            </div>
+            <table class="table table-striped table-hover table-bordered">
+                <thead>
+                    <tr>
+
+                        <th cls="thcls">Title Of the Book</th>
+
+                        <th cls="thcls">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="tbodycls">
+                    @foreach (var item in Model)
+                    {
+                        <tr class="trcls">
+
+                            <td>@item.Title</td>
+                            <td>
+                                <a asp-action="ViewEvent" asp-route-eventId=@item.EventId asp-controller="ReadingEvent" class="view" title="View" data-toggle="tooltip"><i class="material-icons" style="color:lightseagreen">&#xE417;</i></a>
+                                @if ((item.Date.Date > DateTime.Now.Date.Date) || ((item.Date.Date == DateTime.Now.Date.Date) && (item.StartTime.TimeOfDay > DateTime.Now.TimeOfDay)))
+                                {
+                                    <a asp-action="EditEvent" asp-route-eventId=@item.EventId asp-controller="ReadingEvent" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons" style="color:yellow">&#xE254;</i></a>
+
+                                }
+
+                                <a asp-action="DeleteEvent" asp-route-eventId=@item.EventId asp-controller="ReadingEvent" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons" style="color:red">&#xE872;</i></a>
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

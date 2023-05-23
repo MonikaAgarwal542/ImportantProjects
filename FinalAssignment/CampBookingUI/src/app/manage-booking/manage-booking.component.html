@@ -1,0 +1,89 @@
+<body>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-sm-4">
+            <form [formGroup]="searchbooking" (ngSubmit)="search()">
+                <div class="mb-3 row">
+                    <!-- <label for="Bookingreferencenumber" class="col-sm-12 text-center mb-3"><strong>Reference
+                            Number</strong></label> -->
+                    <div class="col-sm-12">
+                        <div class="input-group">
+                            <input type="text" class="form-control" formControlName="Bookingreferencenumber"
+                                placeholder="Reference Number">
+                               
+                            <button  class="btn btn-outline-secondary" >Search</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+   
+    <div class="row justify-content-center border" *ngIf="show">
+        <div class="col-sm-5">
+            <div class="row">
+                <div class="col-sm-12"><img  style="width:100%;height:100%;" src="{{data.imageurl}}" focusable="false"></div>
+               
+              </div> 
+              <div class="row">
+                <div class="col-sm-12 text-center"><h4>{{data.campname}}</h4></div>
+                
+              </div> 
+            
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-5">
+         
+          <div class="row">
+            <div class="col-sm-5"><h5>Max Capacity:</h5></div>
+            <div class="col-sm-7">{{data.capacity}}</div>
+          </div> 
+          <div class="row">
+            <div class="col-sm-5"><h5>Description:</h5></div>
+            <div class="col-sm-7">{{data.description}}</div>
+          </div> 
+          <div class="row">
+            <div class="col-sm-5"><h5>Booking From:</h5></div>
+            <div class="col-sm-7">{{bookingfrom}}</div>
+          </div> 
+          <div class="row">
+            <div class="col-sm-5"><h5>Booking To:</h5></div>
+            <div class="col-sm-7">{{bookingto}}</div>
+          </div> 
+          <div class="row">
+            <div class="col-sm-5"><h5>Total Price:</h5></div>
+            <div class="col-sm-7">{{bookingdata.totalprice}}</div>
+          </div> 
+
+          <div class="row">
+            <div class="col-sm-5"><h5>Address:</h5></div>
+            <div class="col-sm-7">{{bookingdata.adress}}</div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5"><h5>State:</h5></div>
+            <div class="col-sm-7">{{bookingdata.state}}</div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5"><h5>Country:</h5></div>
+            <div class="col-sm-7">{{bookingdata.country}}</div>
+          </div> 
+          <div class="row">
+            <div class="col-sm-5"><h5>ZipCode:</h5></div>
+            <div class="col-sm-7">{{bookingdata.zipcode}}</div>
+          </div> 
+        
+         
+          
+          <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-9">
+                <button class="btn btn-lg btn-outline-danger" (click)="cancelbooking()">Cancel</button>
+               <button class="btn btn-lg btn-outline-secondary">Submit</button>
+            </div>
+          </div>  
+
+        </div>
+    </div>
+
+</div>
+</body>

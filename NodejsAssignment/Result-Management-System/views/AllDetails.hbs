@@ -1,0 +1,81 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    {{>header}}   
+    <div style="text-align: right;margin-right:30px;">
+      <a href="add"><button type="button" class="btn btn-primary">Add Students</button></a>
+    </div>
+<div class="container-xl">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row"><br/>
+                   <div class="col-sm-4"><p> <b>Total  students {{c}}</b></p>
+                   </div>
+              
+                </div>
+            </div>
+            <table class="table table-striped table-hover table-bordered">
+                <thead>
+                    <tr>
+
+                        <th>Roll No.</th>
+                        <th>Name</th>
+                        <th>Date Of Birth</th>
+                        <th>Score</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                     {{#data}}
+                        <tr>
+
+                            <td>{{rollno}}</td>
+                            <td>{{name}}</td>
+                            <td class="cls">{{dob}}</td>
+                            <td>{{score}}</td>
+                            <td>
+                                
+                                    
+                                    <button class="btn btn-secondary"><a class="text-white" href="/details/{{id}}">
+                                      Edit
+                                    </a></button>
+                                    </a>&nbsp;
+                                    
+                                    <button class="btn btn-danger md-2" ><a class="text-white" href="/delete/{{id}}">
+                                      Delete
+                                    </a></button>
+                            </td>
+
+                        </tr>
+                          {{/data}}
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+ <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    >
+    function convert(dob){
+     document.getElementByClass("cls").innerHTML;
+    
+    }
+    </script>
+
+</body>
+</html>

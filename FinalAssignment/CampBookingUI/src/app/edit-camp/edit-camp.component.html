@@ -1,0 +1,67 @@
+<section class="container-fluid">
+    <!-- row and justify-content-center class is used to place the form in center -->
+    <section class="row justify-content-center">
+      <section class="col-12 col-sm-6 col-md-4">
+        <form class="form-container" [formGroup]="updatecampform" (ngSubmit)="updatecamp()">
+        <div class="form-group">
+            
+        
+          
+          <label for="Campname">Camp Name</label>
+           <input type="text"  formControlName="Campname" id="Campname" class="form-control">
+           <span  class="text-danger" *ngIf="updatecampform.controls['Campname'].touched && updatecampform.hasError('required','Campname')">CampName  is required</span>
+                                           
+        </div>
+        <div class="form-group">
+          <label for="Capacity">Capacity</label>
+          <input type="number" formControlName="Capacity" id="Capacity" class="form-control" />
+          <span  class="text-danger" *ngIf="updatecampform.controls['Capacity'].touched && updatecampform.hasError('required','Capacity')">Capacity field is required</span>
+         
+        </div>
+        <div class="form-group">
+            <label for="Description">Description</label>
+            <input type="text" formControlName="Description" id="Description" class="form-control" />
+            <span  class="text-danger" *ngIf="updatecampform.controls['Description'].touched && updatecampform.hasError('required','Description')">Description field is required</span>
+           
+          </div>
+          <div class="form-group">
+            <label for="Ratepernightforweekdays">Ratepernightforweekdays</label>
+            <input type="number" formControlName="Ratepernightforweekdays" id="Ratepernightforweekdays" class="form-control" />
+            <span  class="text-danger" *ngIf="updatecampform.controls['Ratepernightforweekdays'].touched && updatecampform.hasError('required','Ratepernightforweekdays')">Ratepernightforweekdays field is required</span>
+           
+          </div>
+          <div class="form-group">
+            <label for="Ratepernightforweekend">Ratepernightforweekend</label>
+            <input type="number" formControlName="Ratepernightforweekend" id="Ratepernightforweekend" class="form-control" />
+            <span  class="text-danger" *ngIf="updatecampform.controls['Ratepernightforweekend'].touched && updatecampform.hasError('required','Ratepernightforweekend')">Ratepernightforweekend field is required</span>
+           
+          </div>
+          <div class="form-group">
+            <label for="Availablefrom">Availablefrom</label>
+            <input type="date" formControlName="Availablefrom" id="Availablefrom" class="form-control" />
+            <span  class="text-danger" *ngIf="updatecampform.controls['Availablefrom'].touched && updatecampform.hasError('required','Availablefrom')">Availablefrom field is required</span>
+           
+          </div>
+          <div class="form-group">
+            <label for="Availableto">Availableto</label>
+            <input type="date" formControlName="Availableto" id="Availableto" class="form-control" />
+            <span  class="text-danger" *ngIf="updatecampform.controls['Availableto'].touched && updatecampform.hasError('required','Availableto')">Availableto field is required</span>
+           
+          </div>
+
+          <div class="form-group">
+            <label for="Imageurl">Imageurl</label>
+            <input type="url" formControlName="Imageurl" id="Imageurl" class="form-control" />
+            <span  class="text-danger" *ngIf="updatecampform.controls['Imageurl'].touched && updatecampform.hasError('required','Imageurl')">Imageurl field is required</span>
+           
+          </div>
+          
+
+        
+        <button [disabled]="!updatecampform.valid" class="btn btn-primary btn-block">Update Camp</button>
+        
+        </form>
+      </section>
+    </section>
+</section>
+

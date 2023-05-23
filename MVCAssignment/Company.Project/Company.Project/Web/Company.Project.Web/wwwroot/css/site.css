@@ -1,0 +1,167 @@
+﻿a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 50%;
+}
+.bgcolor{
+    background-color:lightseagreen;
+}
+
+.nav-link:hover {
+    font-weight: bolder;
+    border-bottom: 3px solid white;
+}
+
+span.icon {
+    font-family: 'Glyphicons Halflings';
+}
+
+
+
+
+/*.table-responsive {
+    margin: 30px 0;
+}*/
+
+/*.table-wrapper {
+    min-width: 1000px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}*/
+
+/*.table-title {
+    padding-bottom: 10px;
+    margin: 0 0 10px;
+    min-width: 100%;
+}*/
+
+    /*.table-title h2 {
+        margin: 8px 0 0;
+        font-size: 22px;
+    }*/
+/*table.table tr th, table.table tr td {
+   
+    border-color:lightseagreen;
+}*/
+/*
+table.table-striped .tbodycls .trcls:nth-of-type(odd) {
+    background-color: #fcfcfc;
+}
+
+table.table-striped.table-hover .tbodycls .trcls:hover {
+    background: #f5f5f5;
+}
+
+table.table .thcls i {
+    font-size: 13px;
+    margin: 0 5px;
+    cursor: pointer;
+}*/
+/*
+table.table td:last-child {
+    width: 130px;
+}
+
+table.table td a {
+    color: #a0a5b1;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+  
+
+table.table td i {
+    font-size: 19px;
+}    
+*/

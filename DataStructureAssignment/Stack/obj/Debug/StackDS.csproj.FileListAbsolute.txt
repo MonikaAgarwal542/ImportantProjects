@@ -1,0 +1,7 @@
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\DataStructureAssignment\Stack\bin\Debug\Stack.exe.config
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\DataStructureAssignment\Stack\bin\Debug\Stack.exe
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\DataStructureAssignment\Stack\bin\Debug\Stack.pdb
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\DataStructureAssignment\Stack\obj\Debug\StackDS.csproj.AssemblyReference.cache
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\DataStructureAssignment\Stack\obj\Debug\StackDS.csproj.CoreCompileInputs.cache
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\DataStructureAssignment\Stack\obj\Debug\Stack.exe
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\DataStructureAssignment\Stack\obj\Debug\Stack.pdb

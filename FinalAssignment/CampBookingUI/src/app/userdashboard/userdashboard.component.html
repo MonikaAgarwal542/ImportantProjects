@@ -1,0 +1,75 @@
+
+<div class="container-fluid">
+    <div class="row">
+      
+        <div class="col-sm-5 search-box">
+            <form class="form-container" [formGroup]="searchform"  (ngSubmit)="searchcamp()">
+                
+                <table style="width:100%">
+                    <tr><td></td><td><h4 class="heading">Search</h4></td></tr>
+                    <tr>
+                    <td><label for="Availablefrom">Check In</label></td>
+                    <td><input type="date"  [checked]="setMin()" max="{{Date2 | date:'yyyy-MM-dd'}}" min="{{minDate | date:'yyyy-MM-dd'}}" [(ngModel)]="Date1" formControlName="Availablefrom"   class="form-control"  id="Availablefrom">
+                      <span  class="text-danger" *ngIf="searchform.controls['Availablefrom'].touched && searchform.hasError('required','Availablefrom')">Enter the CheckIn date</span>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td> <label for="Availableto">Check Out</label></td>
+                    <td><input type="date"  min="{{minDate1 | date:'yyyy-MM-dd'}}" [(ngModel)]="Date2" formControlName="Availableto"  class="form-control" id="Availableto">
+                      <span  class="text-danger" *ngIf="searchform.controls['Availableto'].touched && searchform.hasError('required','Availableto')">Enter the CheckOut date</span>
+                    </td>
+                       
+                </tr>
+                <tr>
+                    <td><label for="capacity">Capacity</label></td>
+                  <td><select formControlName="capacity"  name="capacity" class="form-select" id="capacity">
+                      
+                      <option value=0>--Any--</option>
+                      <option value=1>1</option>
+                      <option value=2>2</option>
+                      <option value=4>4</option>
+                      <option value=8>8</option>
+                  </select><span  class="text-danger" *ngIf="searchform.controls['capacity'].touched && searchform.hasError('required','capacity')">Select the capacity</span>
+                  </td>
+                 
+                </tr>
+                <tr>
+               <td> <button [disabled]="!searchform.valid" class="btn btn-outline-primary mb-2" >Search</button></td>
+               <td><h6 class="text-successs">*Discount available on booking of more than 3 days</h6></td>
+            </tr>
+            </table>
+            </form>
+        </div>
+        <div class="col-sm-5 list-box mx" >
+            <div class="card mb-3" style="width: 600px;border: 2px solid pink;" *ngFor="let item of list | paginate : { itemsPerPage: 3, currentPage: p}">
+              <!-- <div *ngIf="listlength()=='true'">
+                <h1>No Data </h1>
+              </div> -->
+                <div class="row g-0" >
+                  <div class="col-md-4" >
+                    <img src="{{item.imageurl}}" class="img-fluid rounded-start" alt="camp"><br/>
+                    <div class="heading">
+                        <p>Max: {{item.capacity}} person</p>
+                        
+                        
+                        
+                    </div>
+                  </div>
+                  <div class="col-md-8" >
+                    <div class="card-body">
+                      <h6 class="card-title text-end heading">INR {{item.ratepernightforweekdays}}<small> per weekdaynight</small></h6>
+                      <h6 class="card-title text-end heading">INR {{item.ratepernightforweekend}}<small> per weekendnight</small></h6>
+                      <h6 class="card-text head">{{item.description}}</h6>
+                      <a  class="d-flex justify-content-start">
+                        <button class="btn btn-outline-danger" (click)="bookcamp(item)" [disabled]="!searchform.valid">Book</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <pagination-controls class="d-flex justify-content-center" (pageChange)="p = $event"></pagination-controls>
+        </div>
+    </div>
+</div>
+

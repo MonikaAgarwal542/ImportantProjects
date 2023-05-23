@@ -1,0 +1,76 @@
+
+  <div class="card">
+
+    <!-- row and justify-content-center class is used to place the form in center -->
+    <!-- <section class="row justify-content-center">
+      <section class="col-12 col-sm-6 col-md-4"> -->
+        <div class="card-body">
+        <form  [formGroup]="addcampform" (ngSubmit)="addcamp()">
+        <div class="form-group col-6">
+            
+         
+          
+          <label for="Campname">Camp Name</label>
+           <input type="text"  formControlName="Campname" id="Campname" class="form-control">
+           <span  class="text-danger font-weight-bolder" *ngIf="addcampform.controls['Campname'].touched && addcampform.hasError('required','Campname')">CampName  is required</span>
+                                           
+        </div>
+        <div class="form-group col-6">
+          <label for="Capacity">Capacity</label>
+          <input type="number" formControlName="Capacity" id="Capacity" class="form-control" />
+          <span  class="text-danger font-weight-bolder" *ngIf="addcampform.controls['Capacity'].touched && addcampform.hasError('required','Capacity')">Capacity field is required</span>
+          <span  class="text-danger font-weight-bolder" *ngIf="addcampform.controls['Capacity'].touched && addcampform.hasError('min','Capacity')">Minimum capacity is 2</span>
+         
+        </div>
+        <div class="form-group col-6">
+            <label for="Description">Description</label>
+            <textarea type="text" rows="3" formControlName="Description" id="Description" class="form-control"></textarea>
+            <span  class="text-danger font-weight-bolder" *ngIf="addcampform.controls['Description'].touched && addcampform.hasError('required','Description')">Description field is required</span>
+           
+          </div>
+          <div class="form-group col-6">
+            <label for="Ratepernightforweekdays">Ratepernightforweekdays</label>
+            <input type="number" formControlName="Ratepernightforweekdays" id="Ratepernightforweekdays" class="form-control" />
+            <span  class="text-danger font-weight-bolder" *ngIf="addcampform.controls['Ratepernightforweekdays'].touched && addcampform.hasError('required','Ratepernightforweekdays')">Ratepernightforweekdays field is required</span>
+            <span  class="text-danger font-weight-bolder" *ngIf="addcampform.controls['Ratepernightforweekdays'].touched && addcampform.hasError('min','Ratepernightforweekdays')">Ratepernightforweekdays cannot be negative</span>
+           
+           
+          </div>
+          <div class="form-group col-6">
+            <label for="Ratepernightforweekend">Ratepernightforweekend</label>
+            <input type="number" formControlName="Ratepernightforweekend" id="Ratepernightforweekend" class="form-control" />
+            <span  class="text-danger font-weight-bolder" *ngIf="addcampform.controls['Ratepernightforweekend'].touched && addcampform.hasError('required','Ratepernightforweekend')">Ratepernightforweekend field is required</span>
+            <span  class="text-danger font-weight-bolder" *ngIf="addcampform.controls['Ratepernightforweekend'].touched && addcampform.hasError('min','Ratepernightforweekend')">Ratepernightforweekend cannot be negative</span>
+           
+           
+          </div>
+          <div class="form-group col-6">
+            <label for="Availablefrom">Availablefrom</label>
+            <input type="date" formControlName="Availablefrom" id="Availablefrom" class="form-control" />
+            <span  class="text-danger font-weight-bolder" *ngIf="addcampform.controls['Availablefrom'].touched && addcampform.hasError('required','Availablefrom')">Availablefrom field is required</span>
+           
+          </div>
+          <div class="form-group col-6">
+            <label for="Availableto">Availableto</label>
+            <input type="date" formControlName="Availableto" id="Availableto" class="form-control" />
+            <span  class="text-danger font-weight-bolder" *ngIf="addcampform.controls['Availableto'].touched && addcampform.hasError('required','Availableto')">Availableto field is required</span>
+           
+          </div>
+
+          <div class="form-group col-6">
+            <label for="Imageurl">Imageurl</label>
+            <input type="url" formControlName="Imageurl" id="Imageurl" class="form-control" />
+            <span  class="text-danger font-weight-bolder" *ngIf="addcampform.controls['Imageurl'].touched && addcampform.hasError('required','Imageurl')">Imageurl field is required</span>
+           
+          </div>
+          
+
+        
+        <button [disabled]="!addcampform.valid" class="btn btn-primary btn-block col-6">Create Camp</button>
+        
+        </form>
+        </div>
+      <!-- </section>
+    </section> -->
+
+</div>

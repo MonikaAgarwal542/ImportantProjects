@@ -1,0 +1,20 @@
+input:hover{
+    border:2px solid rosybrown;
+}
+.bdr{
+    border:1px solid rosybrown;
+}
+
+input.ng-invalid{
+    border-left:1px solid red;
+
+}
+
+input.ng-valid{
+    border-left:1px solid green;
+
+}
+
+.error{
+    color:red;
+}

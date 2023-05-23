@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 bgcolor">
+    <div class="container">
+        <a class="navbar-brand head"><img src="https://static.thenounproject.com/png/25759-200.png" /><b>Result Management System</b></a>
+       
+        <button (click)=toggleDisplayDivIf() class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbar-collapse"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+       
+        <div [ngClass]="{ 'show': isShowDivIf}" class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" >
+            <ul class="navbar-nav flex-grow-1">
+                <li   class="nav-item" *ngIf="element == true" routerLinkActive="active">
+                    <a class="nav-link text-white" routerLink="./">HOME
+                       
+                    </a>
+                </li>
+                <li   class="nav-item" *ngIf="studentclick == true" routerLinkActive="active">
+                    <a class="nav-link text-white" routerLink="Result">HOME
+                       
+                    </a>
+                </li>
+
+                <li  class="nav-item" *ngIf="element == true" routerLinkActive="active">
+                    <a class="nav-link text-white" routerLink="AllRecords">ALL RECORDS</a>
+                </li>
+                <li  class="nav-item" *ngIf="element == true" routerLinkActive="active">
+                    <a class="nav-link text-white" routerLink="AddRecords">ADD RECORDS</a>
+                </li>
+                <li  class="nav-item" routerLinkActive="active">
+                    <a class="nav-link text-white" routerLink="About">ABOUT</a>
+                </li>
+                <li  class="nav-item" routerLinkActive="active">
+                    <a class="nav-link text-white" routerLink="Help">HELP?</a>
+                </li>
+                <li  class="nav-item"   routerLinkActive="active">
+                    <a class="nav-link text-white" routerLink="">LOGOUT</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

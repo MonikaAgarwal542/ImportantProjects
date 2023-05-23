@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <style>
+        th, td {
+  padding: 12px;
+  text-align: left;
+   border-bottom: 1px solid #ddd;
+}
+    </style>
+  </head>
+
+ 
+  <body>
+       {{>header}} 
+     <div class="container">
+    
+       
+ 
+      
+     {{#if msg}}
+      <div class="d-flex justify-content-start mx-3 align-items-center"><button type="button" class="btn btn-primary my-4"><a href="/search"class="text-white">Back</a></button></div>
+      <h3 style="text-align:center;color:BLUE">RESULT</h3>
+        <table style="width:60%;margin-left:auto;margin-right:auto; table-layout: auto;">
+    
+          <tr>
+    
+            <th>Roll number</th>
+    
+            <td>{{rollno}}</td>
+    
+          </tr>
+    
+          <tr>
+    
+            <th>Name</th>
+    
+            <td>{{name}}</td>
+    
+          </tr>
+    
+          <tr>
+    
+            <th>Date of birth</th>
+    
+            <td>{{dob}}</td>
+    
+          </tr>
+    
+          <tr>
+    
+            <th>Score</th>
+    
+            <td>{{score}}</td>
+    
+          </tr>
+           <tr>
+    
+            <th>Result</th>
+    
+            <td>{{result}}</td>
+    
+          </tr>
+          
+    
+        </table>
+         {{/if}}
+    
+       
+    
+    </div>
+
+
+ <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Business_Logic_Layer",
+    "\\Business_Logic_Layer\\Models",
+    "\\CampBookingApi",
+    "\\CampBookingApi\\Controllers",
+    "\\Data_Access_layer",
+    "\\Data_Access_layer\\Repository"
+  ],
+  "SelectedNode": "\\CampBookingApi.sln",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,13 @@
+.border{
+
+    background-image:url('https://images.pexels.com/photos/803226/pexels-photo-803226.jpeg?auto=compress&cs=tinysrgb&w=600');
+
+    background-size: cover; 
+
+   background-repeat: no-repeat;
+
+} 
+
+/* .border{
+    border: 2px solid #3c5d7e!important;
+} */

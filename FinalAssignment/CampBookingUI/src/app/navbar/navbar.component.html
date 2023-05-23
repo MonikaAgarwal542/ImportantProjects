@@ -1,0 +1,47 @@
+
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 bgcolor">
+    <div class="container">
+        <a class="navbar-brand head"><img src="https://cdn-icons-png.flaticon.com/512/1293/1293176.png" />CAMP NAGARRO</a>
+        <!-- <a class=" navbar-brand head"></a> -->
+       
+        <button (click)=toggleDisplayDivIf() class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbar-collapse"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+       
+        <div [ngClass]="{ 'show': isShowDivIf}" class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" >
+            <ul class="navbar-nav flex-grow-1">
+               
+                <li  class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="Camp">DASHBOARD</a>
+                </li>
+                <li  class="nav-item"  *ngIf="isadmin()=='true'">
+                    <a class="nav-link" routerLink="AddCamp" >ADD CAMP</a>
+                </li>
+                <li  class="nav-item"   *ngIf="isadmin()=='true'">
+                    <a class="nav-link" routerLink="AllCamps">MANAGE CAMPS</a>
+                </li>
+                <li  class="nav-item">
+                    <a class="nav-link" routerLink="SearchBooking">MANAGE BOOKING</a>
+                </li>
+               
+                <li  class="nav-item" routerLinkActive="active">
+                    <a class="nav-link"  >ABOUT</a>
+                </li>
+                <li  class="nav-item" routerLinkActive="active">
+                    <a class="nav-link"  >HELP?</a>
+                </li>
+                <li  class="nav-item"  routerLinkActive="active">
+                    <a class="nav-link" (click)="onlogout()">LOGOUT {{ans[0]}}</a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+<router-outlet></router-outlet>

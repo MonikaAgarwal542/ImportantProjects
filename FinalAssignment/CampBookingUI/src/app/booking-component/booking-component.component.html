@@ -1,0 +1,115 @@
+<div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-5 border"><img src="{{campdata.imageurl}}" style="width:100%;height: auto;">
+          <div class="row m-2">
+            <div class="col-sm-12">
+               <h2 class="text-center" style="color:deepskyblue">{{campdata.campname}}</h2> 
+            </div>
+            <div class="row">
+            <div class="col-sm-6">
+              <h6><b>INR {{campdata.ratepernightforweekdays}}</b> per weekdaynight</h6> 
+              
+
+            </div>
+            <div class="col-sm-6">
+              <h6><b>INR. {{campdata.ratepernightforweekend}}</b> per weekendnight</h6> 
+              
+
+            </div>
+            <div class="row">
+              <div class="col-sm-12"><h4>{{campdata.description}}</h4></div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="col-sm-7 border" >
+            <div class="row" >
+                <div class="col-sm-12">
+                  <!-- <h6>Use Coupon Code : {{couponcode}}</h6> -->
+                  <h5 *ngIf="count==2">Coupon applied!!</h5>
+                    <br/><input  type="text" *ngIf="count<=1" value={{couponcode}}/><label>  <button *ngIf="count<=1" (click)="updateprice()">  Apply Coupon Code</button></label>
+                </div>
+           
+          </div> 
+          
+          <div class="row">
+            <div class="col-sm-12">Total Stay : {{totalstay}} nights</div>
+           
+          </div>
+          <div class="row">
+            <div class="col-sm-12">Total Amount : INR {{totalprice}}</div>
+           
+          </div>
+          
+
+          <div class="row">
+            <div class="col-sm-12">
+          <form class="form-container" [formGroup]="bookingform" (ngSubmit)="addbooking()">
+            <div class="row">
+              <div class="col-sm-12 mb-3">
+                <br/>
+                <h6>Please fill details below to complete booking</h6>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4 mb-3">
+                <label for="Address"><b>Billing Address</b></label>
+              </div>
+              <div class="col-sm-8 mb-3">
+                <input formControlName="Address" type="text" class="form-control" placeholder="Address">
+                <span  class="text-danger" *ngIf="bookingform.controls['Address'].touched && bookingform.hasError('required','Address')">Address field is required</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4 mb-3">
+                <label for="State"><b>State</b></label>
+              </div>
+              <div class="col-sm-8 mb-3">
+                <input formControlName="State" id="State" type="text" class="form-control" placeholder="State">
+                <span  class="text-danger" *ngIf="bookingform.controls['State'].touched && bookingform.hasError('required','State')">State field is required</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4 mb-3">
+                <label for="Country"><b>Country</b></label>
+              </div>
+              <div class="col-sm-8 mb-3">
+                <input formControlName="Country" id="Country" type="text" class="form-control" placeholder="Country">
+                <span  class="text-danger" *ngIf="bookingform.controls['Country'].touched && bookingform.hasError('required','Country')">Country field is required</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4 mb-3">
+                <label for="Zipcode"><b>ZipCode</b></label>
+              </div>
+              <div class="col-sm-8 mb-3">
+                <input formControlName="Zipcode" id="Zipcode" type="number" class="form-control" placeholder="ZipCode">
+                <span  class="text-danger" *ngIf="bookingform.controls['Zipcode'].touched && bookingform.hasError('required','Zipcode')">Zipcode field is required</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4 mb-3">
+                <label for="Cellphone"><b>Cell Phone</b></label>
+              </div>
+              <div class="col-sm-8 mb-3">
+                <input type="number" formControlName="Cellphone" id="Cellphone" class="form-control" placeholder="Cell Phone">
+                <span  class="text-danger" *ngIf="bookingform.controls['Cellphone'].touched && bookingform.hasError('required','Cellphone')">Cellphone field is required</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-10 mb-3"></div>
+              <div class="col-sm-2 mb-3">
+                <button class="btn btn-outline-danger" [disabled]="!bookingform.valid" >
+                 Confirm Booking</button>
+              </div>
+
+            </div>
+          </form>
+
+          </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  </div>

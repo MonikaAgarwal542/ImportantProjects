@@ -1,0 +1,15 @@
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\MVCAssignment\Company.Project\Company.Project\PlugIn\Company.Project.Loggig.NLog\bin\Release\netcoreapp3.1\Company.Project.Loggig.NLog.deps.json
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\MVCAssignment\Company.Project\Company.Project\PlugIn\Company.Project.Loggig.NLog\bin\Release\netcoreapp3.1\Company.Project.Loggig.NLog.runtimeconfig.json
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\MVCAssignment\Company.Project\Company.Project\PlugIn\Company.Project.Loggig.NLog\bin\Release\netcoreapp3.1\Company.Project.Loggig.NLog.runtimeconfig.dev.json
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\MVCAssignment\Company.Project\Company.Project\PlugIn\Company.Project.Loggig.NLog\bin\Release\netcoreapp3.1\Company.Project.Loggig.NLog.dll
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\MVCAssignment\Company.Project\Company.Project\PlugIn\Company.Project.Loggig.NLog\bin\Release\netcoreapp3.1\Company.Project.Loggig.NLog.pdb
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\MVCAssignment\Company.Project\Company.Project\PlugIn\Company.Project.Loggig.NLog\bin\Release\netcoreapp3.1\Company.Project.Core.dll
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\MVCAssignment\Company.Project\Company.Project\PlugIn\Company.Project.Loggig.NLog\obj\Release\netcoreapp3.1\Company.Project.Loggig.NLog.csproj.AssemblyReference.cache
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\MVCAssignment\Company.Project\Company.Project\PlugIn\Company.Project.Loggig.NLog\obj\Release\netcoreapp3.1\Company.Project.Loggig.NLog.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\MVCAssignment\Company.Project\Company.Project\PlugIn\Company.Project.Loggig.NLog\obj\Release\netcoreapp3.1\Company.Project.Loggig.NLog.AssemblyInfoInputs.cache
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\MVCAssignment\Company.Project\Company.Project\PlugIn\Company.Project.Loggig.NLog\obj\Release\netcoreapp3.1\Company.Project.Loggig.NLog.AssemblyInfo.cs
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\MVCAssignment\Company.Project\Company.Project\PlugIn\Company.Project.Loggig.NLog\obj\Release\netcoreapp3.1\Company.Project.Loggig.NLog.csproj.CoreCompileInputs.cache
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\MVCAssignment\Company.Project\Company.Project\PlugIn\Company.Project.Loggig.NLog\obj\Release\netcoreapp3.1\Company.Project.Loggig.NLog.csproj.CopyComplete
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\MVCAssignment\Company.Project\Company.Project\PlugIn\Company.Project.Loggig.NLog\obj\Release\netcoreapp3.1\Company.Project.Loggig.NLog.dll
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\MVCAssignment\Company.Project\Company.Project\PlugIn\Company.Project.Loggig.NLog\obj\Release\netcoreapp3.1\Company.Project.Loggig.NLog.pdb
+C:\Users\monikaagarwal\Desktop\Project\monika-agarwal\MVCAssignment\Company.Project\Company.Project\PlugIn\Company.Project.Loggig.NLog\obj\Release\netcoreapp3.1\Company.Project.Loggig.NLog.genruntimeconfig.cache

@@ -1,0 +1,151 @@
+﻿@using Company.Project.Web.Models;
+@using Microsoft.AspNetCore.Http;
+
+@model EventModel
+@{
+    ViewBag.Title = "ViewEvent";
+}
+
+<h2>Event Details</h2>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StartTime)
+
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartTime)
+
+        </dd>
+        @if (ViewBag.DisplayDuration)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.Duration)
+
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Duration)
+
+            </dd>
+        }
+        @if (ViewBag.DisplayOtherDetails)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.OtherDetails)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OtherDetails)
+            </dd>
+        }
+        @if (ViewBag.DisplayCount)
+        {
+            <dt>
+                Number of Peoples Invited
+
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Count)
+
+            </dd>
+        }
+        @if (ViewBag.DisplayDescription)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+
+            </dd>
+        }
+    </dl>
+
+
+    @if (Context.Session.GetString("Username") != null)
+    {
+
+        @using (Html.BeginForm("AddCommentsPost", "ReadingEvent", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div>
+                <h6><b>Add Your Comment</b></h6>
+
+                @Html.HiddenFor(model => model.EventId)
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.CommentAdded, new { htmlAttributes = new { @class = "form-control" } })<br />
+                <button type="submit" class="btn btn-sm" style="background-color:lightseagreen">Post</button>
+
+            </div>
+        }
+    }
+      
+
+<p>
+  
+    <h3 style="font-weight:bold">Past Comments</h3>
+    <hr />
+    @if (ViewBag.totalcomments != 0)
+    {
+<h6><b>Comments</b>&nbsp; &nbsp; @ViewBag.totalcomments</h6> 
+    }
+    else
+    {
+<p>No Comments Added</p>
+            }
+
+            
+            <div>
+                @{
+                    <ul class="list-group">
+                        @foreach (var item in ViewBag.Comments)
+                        {
+                        <li class="list-group-item">
+                            
+                            @item.CommentAdded.
+                               
+
+                        </li>
+
+                        }
+                    </ul>
+                }
+
+            </div>
+        </p>
+    
+</div>

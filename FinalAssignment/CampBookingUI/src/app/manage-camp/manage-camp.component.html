@@ -1,0 +1,132 @@
+<!-- 
+       
+<div class="container-xl">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row"><br/>
+                  
+              
+                </div>
+            </div>
+            <table class="table table-striped table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Camp photo</th>
+                        <th>CampName</th>
+                        <th>Description</th>
+                        <th>Capacity</th>
+                        <th>Ratepernightforweekdays</th>
+                        <th>Ratepernightforweekend</th>
+                        <th>Availablefrom</th>
+                        <th>Availableto</th>
+                        
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                        <tr *ngFor="let camp of list">
+
+                            <td><img src="{{camp.imageurl}}"/></td>
+                            <td>{{camp.campname}}</td>
+                            <td>{{camp.description}}</td>
+                            <td>{{camp.capacity}}</td>
+                            <td>{{camp.ratepernightforweekdays}}</td>
+                            <td>{{camp.ratepernightforweekend}}</td>
+                            <td>{{camp.availablefrom | date:"dd-MM-yyyy"}}</td>
+                            <td>{{camp.availableto | date:"dd-MM-yyyy"}}</td>
+                            <td>
+                                
+                                    <a  class="edit"  title="Edit" data-toggle="tooltip"><i class="bi bi-arrow-left-square-fill" (click)="editcamp(camp.campId)" style="color:blue ;cursor:pointer;">&#xE254;</i></a>&nbsp;
+                                    <a  class="delete"  title="Delete" data-toggle="tooltip"><i class="material-icons" (click)="deletecamp(camp.campId)" style="color:red;cursor: pointer;">&#xE872;</i></a>
+                                   
+                                   
+                            </td>
+
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+-->
+<div class="bg">
+<div class="container">
+
+    <div class="album mt-4 bg-transparent">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+
+
+        <div class="col" *ngFor="let data of list| paginate: { itemsPerPage: 3, currentPage: p}">
+
+          <div class="card shadow-sm">
+
+            <img class="bd-placeholder-img card-img-top" style="width:auto;height:225px ;" src="{{data.imageurl}}"
+
+              focusable="false">
+
+            <title>Placeholder</title>
+
+
+
+            <div class="card-body">
+              <h5>{{data.campname}}</h5>
+
+              <ul>
+
+                <li>CampId:{{data.campId}}</li>
+
+                <li>Name:{{data.campname}}</li>
+
+                <li>Capacity:{{data.capacity}}</li>
+
+                <li>Description:{{data.description}}</li>
+
+              </ul>
+
+              <div class="d-flex justify-content-between align-items-center"> 
+                <div class="btn-group">
+
+                    <button type="button" (click)="deletecamp(data.campId)"
+
+                      class="btn btn-sm btn-outline-secondary">Delete</button>
+
+                    <button type="button" routerLink="/admin" class="btn btn-sm btn-outline-secondary"
+
+                      (click)="editcamp(data.campId)">Edit</button>
+
+                  </div>
+
+                
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <pagination-controls (pageChange)="p = $event" class="text-center m-2" style="color: white;">
+
+      </pagination-controls>
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+<router-outlet></router-outlet> 

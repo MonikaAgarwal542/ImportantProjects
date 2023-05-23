@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- CSS only -->
+
+    <link rel="stylesheet" href="../CSSFiles/Styles.css" />
+    <script src="../JSFiles/index.js" defer></script>
+    <title>Student Enrollment</title>
+  </head>
+  <body>
+    <!-- NavBar -->
+    <nav class="navbar back_color">
+      <div class="mx-auto" >
+        <span class="navbar-brand">Student Enrollment Form</span>
+      </div>
+    </nav>
+
+  
+    <section class="bg-white">
+      <div class="container"  >
+        <div class="row py-4 my-4" >
+          <!-- First Column -->
+          <div class="col-12 col-md-6 border-right">
+            <!-- Form -->
+            <form method="post" name="form1" id="enrollment-form" onsubmit="handleSumbit(event)">
+             
+              <div class="row mb-3">
+                <div class="col-3 col-md-4 text-left">
+                  <label for="" class="form-label">Name</label>
+                </div>
+                <div class="col-9 col-md-6 text-center" >
+                  <input type="text" class="form-input m-0 w-100 rounded border-1 input1" title="Min.length is 2 " name="name" required minlength="2"/>
+                  
+                </div>
+               
+              </div>
+              <div class="row mb-3">
+                <div class="col-3 col-md-4 text-start">
+                  <label for="" class="form-label">Email</label>
+                </div>
+                <div class="col-9 col-md-6 text-center">
+                  <input type="email" class="form-input m-0 w-100 rounded border-1 input1" name="email" required/>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-3 col-md-4 text-start">
+                  <label for="" class="form-label">Website</label>
+                </div>
+                <div class="col-9 col-md-6 text-center">
+                  <input type="url" class="form-input m-0 w-100 rounded border-1 input1" name="website" required/>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-3 col-md-4 text-start">
+                  <label for="" class="form-label">Imagelink</label>
+                </div>
+                <div class="col-9 col-md-6 text-center">
+                  <input type="url" class="form-input m-0 w-100 rounded border-1 input1" name="imageLink" required/>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-3 col-md-4 text-start">
+                  <label for="" class="form-label">Gender</label>
+                </div>
+                <div class="col-9 col-md-6 text-start">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="male" value="Male" checked/>
+                    <label class="form-check-label" for="male">Male</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="female" value="Female"/>
+                    <label class="form-check-label" for="female">Female</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-3 col-md-4 text-start">
+                  <label for="" class="form-label">Skills</label>
+                </div>
+                <div class="col-9 col-md-6 text-start">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input skills-checkbox" type="checkbox" id="java" value="Java" name="java" checked/>
+                    <label class="form-check-label" for="java">Java</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input skills-checkbox" type="checkbox"  id="html"  name="html"  value="HTML"/>
+                    <label class="form-check-label" for="html">HTML</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input skills-checkbox" type="checkbox"  id="css"  name="css"  value="CSS"/> 
+                    <label class="form-check-label" for="CSS">CSS</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-6 col-md-4 text-start mb-3">
+                  <button type="submit" class="btn btn-primary">Enroll Student</button>
+                </div>
+                <div class="col-6 col-md-6 text-start">
+                  <button class="btn btn-danger" type="reset" onclick="">Clear</button>
+                </div>
+              </div>
+            </form>
+            
+          </div>
+
+          <!-- Second Column -->
+          <div class="col-12 col-md-6 h-100 text-center">
+            <h3>Enrolled Students</h3><br/>
+         
+            <table class="table table-bordered table-striped h-100 tablecss">
+              <thead >
+                <tr class="text-start text-light header">
+                  <td scope="col" class="col-9 col-md-9"><b>Description</b></td>
+                  <td scope="col"><b>Image</b></td>
+                </tr>
+              </thead>
+              <tbody id="enrollment-records" class="text-start">
+
+                <!-- Adding from JS script -->
+
+              </tbody>
+            </table>
+
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="back_color">
+      <div class="container">
+        <p>&copy; 2021-2022 by Fresher Training</p>
+      </div>
+    </footer>
+  </body>
+</html>

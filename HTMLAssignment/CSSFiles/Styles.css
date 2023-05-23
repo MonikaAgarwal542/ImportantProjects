@@ -1,0 +1,48 @@
+
+   .back_color {
+    text-align: center;
+    background-color: rgb(58, 195, 163);
+    color:white;
+  }
+  
+  
+  .border-right {
+    border: 0px solid  rgb(58, 195, 163);
+    border-width: 0 3px 0 0;
+  }
+  
+
+  
+.input1:valid{
+  border:1px solid green;
+
+}  
+
+.input1:invalid{
+  border:1px solid  red;
+  
+} 
+
+.header{
+  background-color: rgb(152, 193, 85);
+} 
+
+tr:nth-child(even) {
+  background-color:  rgb(212, 223, 197);
+  border:2px solid  rgb(152, 193, 85);
+}
+tr:nth-child(odd){
+  border:2px solid  rgb(152, 193, 85);
+}
+
+
+
+tr:last-child{
+ 
+  animation: fadeIn 5s;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+
+  100% { opacity: 1; }
+}

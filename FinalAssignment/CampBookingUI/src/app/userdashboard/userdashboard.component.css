@@ -1,0 +1,65 @@
+a{
+
+    text-decoration: none;
+
+}
+
+
+
+.btm{
+
+    align-items: baseline;
+
+}
+
+
+
+p{
+
+    text-align: center;
+
+}
+
+
+
+.buttons{
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.heading{
+
+    font-style: normal;
+
+    font-weight: bold;
+
+    color: rgb(42, 70, 127);
+
+}
+.head{
+    font-style:normal;
+    color: rgb(42, 70, 127);
+
+}
+
+table{
+    border:1px solid pink;
+    background-color: lightblue;
+}
+input{
+    width: 150px;
+     height: 100x;
+}
+
+
+
+

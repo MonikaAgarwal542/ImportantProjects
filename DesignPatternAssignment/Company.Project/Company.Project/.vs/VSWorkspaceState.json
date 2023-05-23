@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Business\\ProductDomain",
+    "\\Business\\ProductDomain\\Company.Project.ProductDomain",
+    "\\Business\\ProductDomain\\Company.Project.ProductDomain\\Domain",
+    "\\Web\\Company.Project.Web"
+  ],
+  "PreviewInSolutionExplorer": false
+}
